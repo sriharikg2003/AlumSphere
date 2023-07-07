@@ -1,47 +1,13 @@
 import React from 'react';
-import { createRoot } from "react-dom/client";
-import {useState} from 'react';
+import ReactDOM from 'react-dom/client';
 
-import App from './components/App';
 
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
-
-import SignIn from "./pages/SignIn";
-import Connect from './pages/Connect';
-import Profile from "./pages/Profile";
-import Story from "./pages/Story";
-
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <SignIn />,
-    },
-
-    {
-        path: "post",
-        element: <App />,
-    },
-
-    {
-        path: "connect",
-        element: <Connect />,
-    },
-
-    {
-        path: "story",
-        element: <Story />,
-    },
-    {
-        path: "profile",
-        element: <Profile />,
-    },
-]);
+import App from "./components/App"
 
 
 
-createRoot(document.getElementById("root")).render(
-    <RouterProvider router={router} />
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+
+    <App />
 );

@@ -1,14 +1,21 @@
 import React from 'react';
-import MainLayout from '../Layout/MainLayout';
+import ImageCarousel from '../components/ImageCarousel';
+import Events from '../components/Events/Events';
+import NewsAndStoriesEvents from '../components/News/NewsAndStories';
+import IITMap from '../components/IITMap';
+
 
 function Story() {
   return (
-    <MainLayout>
-    <div>
-        <h1> Story </h1>
-    </div>
-</MainLayout>
+   <div>
+   <ImageCarousel />
+   <div className='Events-and-News'>
+   <Events />
+   <NewsAndStoriesEvents />
+   </div>
+   <IITMap />
+      </div>
   )
 }
 
-export default Story
+export default Story;

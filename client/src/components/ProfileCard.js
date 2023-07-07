@@ -9,26 +9,30 @@ const linkedin = "https://cdn3.iconfinder.com/data/icons/inficons/512/linkedin.p
 
 const deleteMe = "https://www.linkedin.com/in/srihari-k-g-91931a1ab/";
 
-function ProfileCard() {
+function ProfileCard(props) {
   return (
     <div className="profile-card" >
-
-      <div className="profile-info">
-        <div  >
-          <img src={img} className="profile-img" />
-        </div>
-        <div class="profile-name" >
-          Srihari K G
-        </div>
-      </div>
-
+      
+             
+                  <img src={img} className="profile-img" />
+           <div className='profile-right'>
+              <div class="profile-name profile-text" >
+              {props.name}
+              </div>
+              <div class="profile-year profile-text" >
+              {props.yearOfJoin}
+              </div>
+              <div class="profile-location profile-text" >
+              {props.location}
+              </div>
+        
       <div className="urls" >
-        <Logo url={facebook} href={deleteMe}/>
-        <Logo url={twitter} href={deleteMe}/>
-        <Logo url={instagram} href={deleteMe}/>
-        <Logo url={linkedin} href={deleteMe}/>
+        <Logo url={facebook} href={props.facebook} />
+        <Logo url={twitter} href={props.twitter} />
+        <Logo url={instagram} href={props.instagram} />
+        <Logo url={linkedin} href={props.linkedIn} />
       </div>
-
+</div>
     </div>
   )
 }

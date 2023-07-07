@@ -1,19 +1,174 @@
 body {
     margin: 0;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+
+.App {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 99%;
+    justify-content: center;
+    height: 100vh;
+}
+
+#root {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-item:hover,
+.navbar-item:focus {
+    background-color: grey;
+    color: white
+}
+
+.navbar-item {
+
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+}
+
+.hamburger-menu {
+    display: none;
+    /* Hide the hamburger menu by default */
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container-header {
+        flex-direction: column;
+
+        justify-content: left;
+        width: 30%;
+        margin-left: 20px;
+
+
+    }
+
+    .hamburger-menu {
+        display: inline;
+        /* Show the hamburger menu on small screens */
+        position: absolute;
+        /* Position the hamburger menu absolutely */
+        top: 10px;
+        /* Adjust the top position as needed */
+        left: 10px;
+        /* Position the hamburger menu on the extreme left */
+        cursor: pointer;
+        z-index: 90;
+    }
+
+    .navbar-items {
+        display: none;
+        /* Hide the navigation links on small screens by default */
+        align-items: left;
+        position: absolute;
+        margin-top: 5px;
+        flex-direction: column;
+        background-color: #fff;
+
+    }
+
+    .navbar-item {
+        z-index: 90;
+        margin: 0;
+    }
+
+    .navbar-items.active {
+        display: flex;
+        z-index: 90;
+        height: 100%;
+        align-items: stretch;
+        justify-content: flex-start;
+        align-content: stretch;
+        width: 160px;
+        margin: auto;
+        margin-left: -19px;
+        flex-direction: column;
+        margin-top: 0;
+        padding-top: 40px;
+        background-color: white;
+    }
+}
+
+.hamburger-menu-img {
+    height: 20px;
+    width: 20px;
+}
+
+
+
+@keyframes zoom {
+    0% {
+        transform: scale(0.75);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.loader-text {
+    display: inline-block;
+    text-align: center;
+    margin-top: 40px;
+
+    animation: zoom 2.5s linear forwards;
+}
+
+.loader-img {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    animation: zoom 2.5s linear forwards;
+}
+
 
 
 .footer {
     width: 100%;
     position: relative;
-    margin-top: 100%;
+    margin-top: 20%;
+}
+
+.nav-link {
+    color: black;
 }
 
 .signInForm {
-    padding-left: 10%;
-    padding-right: 10%;
-    margin: 5%;
+
+    width: 50%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.signUpForm {
+    width: 50%;
+    margin: auto;
+    margin-top: 60px;
 }
 
 .profile-container {
@@ -30,11 +185,16 @@ body {
 .profile-card {
     margin: 10px;
     border: 1px solid;
-    border-radius: 10%;
-    padding: 2px;
-
+    border-radius: 10px;
+    padding: 7px;
+    display: flex;
+    flex-direction: row;
+    /* height: ; */
+    background-color: white;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
 }
-
 
 .logo {
     width: 30px;
@@ -43,27 +203,34 @@ body {
     border-radius: 20%;
 }
 
-.profile-info {
-    height: 135px;
-    text-align: center;
-    padding: 5px;
-}
 
 .profile-img {
 
-    width: 100px;
-    display: inline;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    display: inline-block;
     object-fit: cover;
     border-radius: 100%;
 
 }
 
-.profile-name {
-    padding: 5px;
-    font-size: small;
+
+.profile-right {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-
+.urls {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+}
 
 .form-group {
     margin-bottom: 20px;
@@ -99,15 +266,47 @@ input[type="submit"] {
 
 }
 
-.bio-data-outer-form{
+.bio-data-outer-form {
     width: 60%;
     margin: auto;
     justify-content: center;
 
 }
 
-.profile{
+.profile {
     text-align: center;
-    /* margin-bottom: 5em; */
     margin: 5em;
 }
+
+
+
+.carosouel-img {
+    height: 400px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 10px;
+
+}
+
+.slider {
+    margin-left: 100px;
+    margin-right: 100px;
+
+    @media (max-width:768px) {
+        flex-direction: row;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+.iitmap {
+    border: 0;
+}
+
+.iit-map-container {
+    width: 80%;
+    margin: auto;
+
+}
+
+

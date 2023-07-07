@@ -1,0 +1,57 @@
+
+.profile-image-biodata {
+    height: 200px;
+    border-radius: 100%;
+    width: 217px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+
+.profile-form-data {
+
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-between;
+
+    
+}
+
+
+.profile-page {
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.biodata-items{
+    margin: 10px;
+
+}
+
+.biodata-container{
+    align-items: center;
+    position: relative;
+}
+.biodata-btn{
+    width: 10%;
+}
+
+.profile-pic-upload-img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    display: inline;
+    top: 77%;
+    right: 5%;
+    border: 0;
+    border-radius: 100%;
+}
+  
