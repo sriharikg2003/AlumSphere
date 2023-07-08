@@ -20,7 +20,7 @@ const otpModel = require("./models/otpModel");
 
 
 const PORT = 3001
-const CPORT = 3002
+const CPORT = 3000
 mongoose.connect('mongodb://127.0.0.1:27017/alumniDB');
 
 app.use(express.json());
@@ -62,8 +62,8 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'sriharikg2003@gmail.com',
-    pass: ''
+    user: process.env.EMAIL,
+    pass: process.env.PASSWORD
   }
 });
 

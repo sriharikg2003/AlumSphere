@@ -6,7 +6,7 @@ import { Outlet } from "react-router-dom";
 function MainLayout() {
 
   // change state to true here
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
